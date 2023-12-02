@@ -1,4 +1,4 @@
-package code
+package com.jtschwartz.aoc2023.lib
 
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -24,7 +24,9 @@ fun Any?.println() = println(this)
 
 fun results(day: Int, part1: Any, part2: Any) {
     println("=".repeat(20))
+    println()
     println("Day $day")
     println("Part 1: $part1")
     println("Part 2: $part2")
+    println()
 }
