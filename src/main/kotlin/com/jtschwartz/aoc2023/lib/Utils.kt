@@ -10,17 +10,15 @@ import kotlin.io.path.readLines
  */
 fun readInput(day: Int, part: Int, isTest: Boolean) = Path("src/main/resources/day$day/${if (isTest) "test$part" else "input"}.txt").readLines()
 
-/**
- * Converts string to md5 hash.
- */
-fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
-    .toString(16)
-    .padStart(32, '0')
+fun List<String>.toInts(): List<Int> = filter { it.isNotBlank() }.map { it.trim().toInt() }
 
-/**
- * The cleaner shorthand for printing output.
- */
-fun Any?.println() = println(this)
+fun <T> List<T>.head(): T = first()
+
+fun <T> List<T>.tail(): List<T> = drop(1)
+
+fun <T> List<T>.headTail(): Pair<T,List<T>> = head() to tail()
+
+fun countingMap(size: Int, default: Int = 0): MutableMap<Int,Int> = (0..<size).associateWith { default }.toMutableMap()
 
 fun results(day: Int, part1: Any, part2: Any) {
     println("=".repeat(20))
