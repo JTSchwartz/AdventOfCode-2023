@@ -18,7 +18,7 @@ class Day04: Day(4) {
     }
 
     private fun List<String>.p2(): Int {
-        val counter = countingMap(size, 1)
+        val counter = countingMap(size) { 1 }
 
         forEachIndexed { index, card ->
             val (winners, numbers) = card.processCard()
@@ -27,7 +27,6 @@ class Day04: Day(4) {
             }
         }
 
-        println(counter.values)
         return counter.values.sum()
     }
 
