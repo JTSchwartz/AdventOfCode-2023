@@ -21,6 +21,8 @@ fun <T> List<T>.tail(): List<T> = drop(1)
 
 fun <T> List<T>.headTail(): Pair<T,List<T>> = head() to tail()
 
+fun <T> List<T>.peek(func: (T) -> Unit) = map { func(it); it }
+
 fun countingMap(size: Int, association: (Int) -> Int = { it }): MutableMap<Int,Int> = (0..<size).associateWith(association).toMutableMap()
 
 fun countingMap(size: Long, association: (Long) -> Long = { it }): MutableMap<Long,Long> = (0..<size).associateWith(association).toMutableMap()

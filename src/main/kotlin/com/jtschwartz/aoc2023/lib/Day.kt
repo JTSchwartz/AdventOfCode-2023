@@ -9,13 +9,14 @@ abstract class Day(val day: Int) {
     fun readInput(part: Int, isTest: Boolean) = readInput(day, part, isTest)
 
     fun printResults() {
+
+        val p1 = part1()
+        val p2 = part2()
         println("=".repeat(20))
         println()
         println("Day $day")
-        print("Part 1: ")
-        println(part1())
-        print("Part 2: ")
-        println(part2())
+        println("Part 1: $p1")
+        println("Part 2: $p2")
         println()
     }
 }
