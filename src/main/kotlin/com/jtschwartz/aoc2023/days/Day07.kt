@@ -1,8 +1,6 @@
 package com.jtschwartz.aoc2023.days
 
 import com.jtschwartz.aoc2023.lib.Day
-import com.jtschwartz.aoc2023.lib.peek
-import java.lang.RuntimeException
 
 class Day07 : Day(7) {
 
